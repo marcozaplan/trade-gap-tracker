@@ -13,7 +13,7 @@ from config import (
     START_YEAR,
 )
 
-st.set_page_config(page_title="Trade Gap Tracker", page_icon="◫", layout="wide")
+st.set_page_config(page_title="Tool on Trade Gap Analysis", page_icon="◫", layout="wide")
 
 INK = "#1b2430"
 MUTED = "#6b7785"
@@ -78,7 +78,7 @@ def hbar(frame, labels, values, height, axis_title):
 aggregate, partners, manifest = load()
 
 if aggregate is None:
-    st.title("Trade Gap Tracker")
+    st.title("Tool on Trade Gap Analysis")
     st.error("No cached dataset found.")
     st.code("export COMTRADE_API_KEY=...\npython prefetch.py", language="bash")
     st.caption(
@@ -92,10 +92,10 @@ if not available:
     st.error("The cache contains no recognised countries.")
     st.stop()
 
-st.title("Trade Gap Tracker")
+st.title("Tool on Trade Gap Analysis")
 st.markdown(
     f"<p style='color:{MUTED}; margin-top:-0.6rem; font-size:1.02rem;'>"
-    "Where declared mineral exports and partner-recorded imports disagree · "
+    "Data on declared mineral exports and partner-recorded imports· "
     f"<a href='{SOURCE_URL}' style='color:{MUTED};'>{SOURCE}</a>, {START_YEAR}–{END_YEAR}"
     "</p>",
     unsafe_allow_html=True,
