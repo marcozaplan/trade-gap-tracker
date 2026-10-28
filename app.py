@@ -292,9 +292,6 @@ st.markdown(
 
 These factors can combine in different proportions for different countries and
 commodities, and this dashboard does not attribute a given gap to any one of them.
-`verify.py` reports one diagnostic — whether a partner recorded imports from a country
-that declared no matching exports to it — which is one data point among several relevant
-to interpreting a gap, not a determination of cause.
 """
 )
 
